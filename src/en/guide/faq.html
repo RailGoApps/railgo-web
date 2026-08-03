@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rg-root" content="../../">
+  <title>FAQ · RailGo</title>
+  <meta name="description" content="Frequently asked questions about RailGo.">
+  <link rel="icon" type="image/png" href="https://railgo.dev/icons/Icon-192.png">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <main id="main" class="page">
+    <div class="container">
+      <aside class="page-aside" id="sidenav"></aside>
+      <div class="page-main">
+        <nav class="breadcrumb">
+          <a href="../">Home</a>
+          <span class="material-symbols-rounded">chevron_right</span>
+          <span>FAQ</span>
+        </nav>
+        <article class="prose">
+          <h1>Frequently Asked Questions</h1>
+          <p class="lead" style="color:var(--md-on-surface-variant);font-size:1.1rem">The most common questions are answered here. Can't find an answer? <a href="../legal/report.html">Let us know</a>.</p>
+
+          <h2>Basics</h2>
+
+          <h3>Is RailGo free?</h3>
+          <p>Yes. RailGo's core query features are completely free with no ads. Server costs are covered by <a href="../legal/sponsor.html">donations</a>.</p>
+
+          <h3>Can RailGo book tickets?</h3>
+          <p>No. RailGo is an <strong>information query tool</strong> and does not support ticket booking. Please use official channels such as 12306 to book.</p>
+
+          <h3>Is the data accurate? How often is it updated?</h3>
+          <p>Data comes from official public APIs and is reliable. Timetable data is usually updated with each schedule revision; real-time data like tickets and delays refreshes at minute-level.</p>
+
+          <h2>Features</h2>
+
+          <h3>Why can't I find a certain train?</h3>
+          <p>Possible reasons: the train is suspended or seasonally inactive; it doesn't run on that day (e.g. some weekend-only services); the number was mistyped. Double-check the train number and retry.</p>
+
+          <h3>Tickets show "available" but I can't book?</h3>
+          <p>The availability RailGo shows is a snapshot at query time and may differ from actual booking time. Always refer to 12306 for real-time availability.</p>
+
+          <h3>How often is delay info updated?</h3>
+          <p>Delay status for running trains updates roughly every few minutes. Due to source limitations, it may lag by a few minutes.</p>
+
+          <h2>Installation & Usage</h2>
+
+          <h3>Android install warns "unknown source"?</h3>
+          <p>This is an Android security mechanism. Go to <strong>Settings → Apps → Special access → Install unknown apps</strong> and allow your browser or file manager to install, then retry.</p>
+
+          <h3>How do I install on iOS?</h3>
+          <p>Follow the guide on the <a href="../download/ios.html">iOS download page</a>: install via TestFlight or an enterprise certificate, and trust the corresponding profile.</p>
+
+          <h3>Does the Windows version need a runtime?</h3>
+          <p>Windows 10 1809 and above need no extra runtime. Older systems may need the WebView2 runtime installed.</p>
+
+          <h2>Other</h2>
+
+          <h3>How do I report bugs or suggestions?</h3>
+          <p>Submit via the <a href="../legal/report.html">Report & Feedback</a> page. We read every piece of feedback carefully.</p>
+
+          <h3>Which railway types are supported?</h3>
+          <p>All China Railway passenger services: high-speed (G), EMU (D/C), intercity (C), direct (Z), express (T), fast (K), and ordinary trains.</p>
+
+          <h3>Are foreign railways supported?</h3>
+          <p>Currently only mainland China railways. Foreign railways are not on the roadmap.</p>
+        </article>
+        <nav class="pager">
+          <a class="prev" href="usage.html">
+            <span class="pager-label">Previous</span>
+            <span class="pager-title">Usage Guide</span>
+          </a>
+          <a class="next" href="../legal/report.html">
+            <span class="pager-label">Next</span>
+            <span class="pager-title">Report & Feedback</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/app.js"></script>
+</body>
+</html>

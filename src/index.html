@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="rg-root" content="">
+  <meta http-equiv="refresh" content="0; url=zh/">
+  <title>RailGo</title>
+  <link rel="icon" type="image/png" href="https://railgo.dev/icons/Icon-192.png">
+  <script>
+    // 根据浏览器语言自动跳转
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || 'zh').toLowerCase();
+      var target = lang.startsWith('en') ? 'en/' : 'zh/';
+      location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting… <a href="zh/">中文</a> | <a href="en/">English</a></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://railgo.dev/zh/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://railgo.dev/en/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://railgo.dev/zh/guide/preface.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/zh/guide/download.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://railgo.dev/zh/guide/usage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://railgo.dev/zh/guide/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://railgo.dev/zh/download/android.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/zh/download/harmony.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/zh/download/ios.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/zh/download/windows.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/zh/legal/report.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://railgo.dev/zh/legal/sponsor.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://railgo.dev/zh/legal/user-agreement.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://railgo.dev/zh/legal/privacy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://railgo.dev/zh/legal/api.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://railgo.dev/en/guide/preface.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/en/guide/download.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://railgo.dev/en/guide/usage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://railgo.dev/en/guide/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://railgo.dev/en/download/android.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/en/download/harmony.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/en/download/ios.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/en/download/windows.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://railgo.dev/en/legal/report.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://railgo.dev/en/legal/sponsor.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://railgo.dev/en/legal/user-agreement.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://railgo.dev/en/legal/privacy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://railgo.dev/en/legal/api.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+</urlset>

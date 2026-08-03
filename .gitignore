@@ -1,0 +1,73 @@
+# ============================================================================
+# RailGo Web — .gitignore
+# 只入库「源码」，忽略一切构建产物、依赖与本地配置
+# ============================================================================
+
+# ---------- 依赖 / 包管理 ----------
+node_modules/
+pnpm-debug.log*
+npm-debug.log*
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ---------- 构建产物 ----------
+# 旧 VuePress 编译输出（散落在根目录的扁平文件）——不应入库，应由源码构建
+dist/
+.cache/
+.temp/
+.vitepress/dist/
+.vuepress/dist/
+
+# 根目录扁平的旧站点产物（已弃用，改用 src/ 源码结构）
+/index.html
+/404.html
+/android.html
+/harmony.html
+/ios.html
+/windows.html
+/welcome.html
+/QFA.html
+/report.html
+/sponsor.html
+/plume.svg
+/sitemap.xml
+/sitemap.xsl
+/assets/
+/article/
+/Agreements/
+/android/
+/harmony/
+/ios/
+/use/
+/en/
+
+# ---------- 本地工具 / 编辑器 ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- AI 代理本地配置 ----------
+.agents/
+
+# ---------- 临时与日志 ----------
+*.log
+tmp/
+_temp/
+
+# ---------- 敏感信息 ----------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ---------- 操作系统 ----------
+$RECYCLE.BIN/
+ehthumbs.db

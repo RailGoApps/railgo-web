@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rg-root" content="../../">
+  <title>API 协议 · RailGo 铁路行</title>
+  <meta name="description" content="RailGo 铁路行 API 使用协议。">
+  <link rel="icon" type="image/png" href="https://railgo.dev/icons/Icon-192.png">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <main id="main" class="page">
+    <div class="container">
+      <aside class="page-aside" id="sidenav"></aside>
+      <div class="page-main">
+        <nav class="breadcrumb">
+          <a href="../">首页</a>
+          <span class="material-symbols-rounded">chevron_right</span>
+          <span>API 协议</span>
+        </nav>
+        <article class="prose">
+          <h1>API 使用协议</h1>
+          <div class="article-meta">
+            <span><span class="material-symbols-rounded">update</span>最近更新：2024 年</span>
+            <span><span class="material-symbols-rounded">api</span>AZ Studio</span>
+          </div>
+
+          <p>RailGo 提供有限的公开 API 供开发者在自己的项目中获取铁路信息。使用前请阅读本协议。</p>
+
+          <div class="alert alert-warning">
+            <span class="material-symbols-rounded">warning</span>
+            <div><p style="margin:0">API 目前处于<strong>受限开放</strong>阶段，可能随时调整或关闭，不建议用于生产关键路径。</p></div>
+          </div>
+
+          <h2>一、接入方式</h2>
+          <p>如需使用 API，请先通过 <a href="report.html">反馈渠道</a> 申请 API Key。我们将根据用途评估是否发放。</p>
+
+          <h2>二、使用限制</h2>
+          <ul>
+            <li><strong>频率限制</strong>：默认每 Key 每分钟不超过 60 次请求。</li>
+            <li><strong>用途限制</strong>：仅限非商业用途，禁止转售数据。</li>
+            <li><strong>署名要求</strong>：使用 API 的项目需在显著位置注明「数据由 RailGo 提供」。</li>
+            <li><strong>缓存限制</strong>：缓存时长不得超过 24 小时。</li>
+          </ul>
+
+          <h2>三、数据范围</h2>
+          <p>当前 API 提供以下能力：</p>
+          <ul>
+            <li>列车时刻查询（按车次）</li>
+            <li>站站车次查询</li>
+            <li>车站信息查询</li>
+          </ul>
+          <p>实时类数据（余票、晚点）暂不对外开放。</p>
+
+          <h2>四、免责声明</h2>
+          <p>API 数据来源于公开渠道，准确性以官方为准。我们不保证 API 的可用性、稳定性，因 API 中断或数据错误造成的损失我们不承担责任。</p>
+
+          <h2>五、违规处理</h2>
+          <p>发现以下行为将立即封禁 Key：</p>
+          <ul>
+            <li>超出频率限制的恶意请求；</li>
+            <li>转售或将数据用于商业产品；</li>
+            <li>伪造来源、规避限制；</li>
+            <li>其他破坏服务稳定的行为。</li>
+          </ul>
+
+          <h2>六、协议变更</h2>
+          <p>我们保留随时修改本协议及 API 接口的权利，变更前会尽量提前通知。</p>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/app.js"></script>
+</body>
+</html>

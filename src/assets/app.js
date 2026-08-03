@@ -263,6 +263,77 @@
     document.body.insertBefore(s, document.body.firstChild);
   }
 
+  /* ---------- Android 实时下载 ---------- */
+  // 通过 AList API（update.railgo.zenglingkun.cn）获取最新版本 APK
+  // 按钮 id="rg-android-dl" 会被自动赋值最新的下载直链
+  const ALIST_BASE = 'https://update.railgo.zenglingkun.cn';
+  const ALIST_DIR = '/update/pack/android';
+
+  // 从文件名解析版本号，用于排序找出最新版
+  // 例：「2.0.2 Build 20002.apk」→ [2,0,2,20002]
+  function parseVer(name) {
+    const m = name.match(/(\d+)\.(\d+)\.(\d+)\s+Build\s+(\d+)/i);
+    return m ? [+m[1], +m[2], +m[3], +m[4]] : [0, 0, 0, 0];
+  }
+  function cmpVer(a, b) {
+    for (let i = 0; i < 4; i++) {
+      if (a[i] !== b[i]) return a[i] - b[i];
+    }
+    return 0;
+  }
+
+  async function initAndroidDownload() {
+    const btn = document.getElementById('rg-android-dl');
+    if (!btn) return;
+    try {
+      const resp = await fetch(ALIST_BASE + '/api/fs/list', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: ALIST_DIR, page: 1, per_page: 100, refresh: false })
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const j = await resp.json();
+      if (j.code !== 200 || !j.data || !Array.isArray(j.data.content)) throw new Error('API ' + j.message);
+
+      // 仅保留 .apk 文件，按版本号降序，取最新
+      const apks = j.data.content.filter(f => !f.is_dir && /\.apk$/i.test(f.name));
+      if (!apks.length) throw new Error('no apk');
+      apks.sort((a, b) => cmpVer(parseVer(b.name), parseVer(a.name)));
+      const latest = apks[0];
+
+      // AList 直链：/d/<路径>/<文件名>?sign=<sign>
+      const url = ALIST_BASE + '/d' + ALIST_DIR + '/' + encodeURIComponent(latest.name) +
+        '?sign=' + encodeURIComponent(latest.sign) + '&type=0';
+
+      // 更新按钮：href 指向直链，target=_blank 触发下载
+      btn.setAttribute('href', url);
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener');
+      btn.removeAttribute('aria-disabled');
+      btn.classList.remove('disabled');
+
+      // 更新按钮文案，附带版本号
+      const span = btn.querySelector('.material-symbols-rounded');
+      const ver = latest.name.replace(/\.apk$/i, '').trim();
+      const tpl = btn.dataset.labelTemplate || '{ver}';
+      const label = document.createElement('span');
+      label.textContent = tpl.replace('{ver}', ver);
+      btn.textContent = '';
+      if (span) btn.appendChild(span);
+      btn.appendChild(label);
+
+      // 同时更新版本元信息
+      document.querySelectorAll('[data-android-version]').forEach(el => {
+        el.textContent = ver;
+      });
+    } catch (e) {
+      console.warn('[RailGo] Android 下载接口失败：', e);
+      // 失败时保留兜底链接（自选版本页面）
+      const fallback = btn.getAttribute('href') || (ALIST_BASE + '/#update/pack/android');
+      btn.setAttribute('href', fallback);
+    }
+  }
+
   /* ---------- 初始化 ---------- */
   function init() {
     addSkipLink();
@@ -272,6 +343,7 @@
     initTheme();
     initProgress();
     initDismissals();
+    initAndroidDownload();
   }
   // 移动端：点击导航链接后自动关闭菜单；点击空白关闭侧边栏抽屉
   function initDismissals() {
